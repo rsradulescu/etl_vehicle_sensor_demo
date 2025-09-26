@@ -1,4 +1,4 @@
-# Public ETL Demo: Vehicle Sensors (comma2k19 → Raw/Bronze/Silver/Gold)
+# Public ETL Demo: Vehicle Sensors (comma2k19)
 ### Author: Rocio Radulescu 
 
 A small, reproducible ETL that reads **public vehicle sensor data** from the
