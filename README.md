@@ -38,3 +38,37 @@ outputs.
      - **Driving events**: Detection and count of hard acceleration and braking events using IMU longitudinal acceleration (`ax`).  
    - These KPIs are commonly used in fleet management and telematics analytics to assess vehicle usage, location accuracy, and driving behavior.
 
+--- 
+
+## How to Run the Pipeline
+
+Follow these steps to set up your environment and run the ETL pipeline:
+
+1. **Create and activate a virtual environment, then install dependencies**
+   ```bash
+   python3.13 -m venv .venv
+   source .venv/bin/activate
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+2. **Extract data (streams public data → RAW)**
+   ```bash
+   python -m etl_comma2k19.cli extract --limit 2000
+   ```
+
+3. **Transform data (RAW → SILVER)**
+   ```bash
+   python -m etl_comma2k19.cli transform
+   ```
+
+4. **Compute metrics (SILVER → GOLD)**
+   ```bash
+   python -m etl_comma2k19.cli metrics
+   ```
+
+5. **Or run the entire pipeline in one step**
+   ```bash
+   python -m etl_comma2k19.cli all --limit 2000
+   ```
+

@@ -28,5 +28,5 @@ init_config = Config()
 def ensure_dirs():
     """Create project data directories if they don't exist."""
     init_config.RAW_PATH.parent.mkdir(parents=True, exist_ok=True)
-    init_config.SILVER_DIR.mkdir(parents=True, exist_ok=True)
-    init_config.GOLD_DIR.mkdir(parents=True, exist_ok=True)
+    #init_config.SILVER_DIR.mkdir(parents=True, exist_ok=True)
+    init_config.PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
