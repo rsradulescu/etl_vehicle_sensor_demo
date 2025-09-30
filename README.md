@@ -46,7 +46,7 @@ Follow these steps to set up your environment and run the ETL pipeline:
 
 1. **Create and activate a virtual environment, then install dependencies**
    ```bash
-   python3.13 -m venv .venv
+   python3 -m venv .venv
    source .venv/bin/activate
    pip install --upgrade pip
    pip install -r requirements.txt
